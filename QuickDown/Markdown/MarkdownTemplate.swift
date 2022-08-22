@@ -58,8 +58,8 @@ class MarkdownTemplate {
         return self.templateText
             .replacingOccurrences(of: "%CLIPBOARD%", with: getPasteboardContent())
             .replacingOccurrences(of: "%DATETIME%", with: Date().formatted())
-            .replacingOccurrences(of: "%DATE%", with: Date().formatted().components(separatedBy: ",").first! )
-            .replacingOccurrences(of: "%TIME%", with: Date().formatted().components(separatedBy: ", ")[1])
+            .replacingOccurrences(of: "%DATE%", with: Date().formatted().components(separatedBy: " at").first! ) // Quick & dirty adaptation for my own use.
+            .replacingOccurrences(of: "%TIME%", with: Date().formatted().components(separatedBy: "at ")[1])      // My formatted dates are like : "22/08/2022 at 11:45"
             .replacingOccurrences(of: "%ID%", with: String(getNextID()))
             .replacingOccurrences(of: "%UUID%", with: UUID().uuidString)
             .replacingOccurrences(of: "%ZKID%", with: df.string(from: Date()))
