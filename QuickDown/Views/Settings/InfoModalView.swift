@@ -14,7 +14,7 @@ struct InfoModalView: View {
                 List {
                     HStack {
                         Text("Global Hotkey")
-                        Text("⌘-⌥-N")
+                        Text("⌘-⌥-D")
                             .bold()
                     }
                     
