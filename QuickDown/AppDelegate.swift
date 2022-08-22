@@ -6,7 +6,7 @@ import HotKey
 class AppDelegate: NSObject, NSApplicationDelegate {
     var contentView: ContentView?
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-    let hotKey = HotKey(key: .n, modifiers: [.command, .option])
+    let hotKey = HotKey(key: .d, modifiers: [.command, .option])
     let icon = NSImage(named: "StatusBarIcon")
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
